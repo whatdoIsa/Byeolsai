@@ -1,0 +1,34 @@
+{
+  "regions": [
+    { "id": "region.solar", "name": "태양계", "requiredTotalFocusSeconds": 0, "artAsset": "sun.max.fill" },
+    { "id": "region.proxima", "name": "프록시마 센타우리", "requiredTotalFocusSeconds": 7200, "artAsset": "star.fill" },
+    { "id": "region.sirius", "name": "시리우스", "requiredTotalFocusSeconds": 21600, "artAsset": "sparkle" },
+    { "id": "region.vega", "name": "베가", "requiredTotalFocusSeconds": 54000, "artAsset": "sparkles" },
+    { "id": "region.orion", "name": "오리온 성운", "requiredTotalFocusSeconds": 108000, "artAsset": "cloud.fog.fill" },
+    { "id": "region.core", "name": "은하 중심", "requiredTotalFocusSeconds": 216000, "artAsset": "atom" },
+    { "id": "region.andromeda", "name": "안드로메다", "requiredTotalFocusSeconds": 432000, "artAsset": "hurricane" }
+  ],
+  "destinations": [
+    { "id": "dest.moon", "name": "달", "regionID": "region.solar", "travelSeconds": 600, "artAsset": "moon.fill" },
+    { "id": "dest.mars", "name": "화성", "regionID": "region.solar", "travelSeconds": 1500, "artAsset": "circle.fill" },
+    { "id": "dest.jupiter", "name": "목성", "regionID": "region.solar", "travelSeconds": 3000, "artAsset": "circle.circle.fill" },
+    { "id": "dest.saturn", "name": "토성", "regionID": "region.solar", "travelSeconds": 5400, "artAsset": "circles.hexagonpath.fill" },
+    { "id": "dest.proxima-b", "name": "프록시마 b", "regionID": "region.proxima", "travelSeconds": 1800, "artAsset": "globe.americas.fill" },
+    { "id": "dest.centauri-station", "name": "센타우리 정거장", "regionID": "region.proxima", "travelSeconds": 3600, "artAsset": "building.columns.fill" },
+    { "id": "dest.sirius-a", "name": "시리우스 A", "regionID": "region.sirius", "travelSeconds": 2400, "artAsset": "star.circle.fill" },
+    { "id": "dest.sirius-b", "name": "시리우스 B", "regionID": "region.sirius", "travelSeconds": 7200, "artAsset": "star.circle" },
+    { "id": "dest.vega-prime", "name": "베가 프라임", "regionID": "region.vega", "travelSeconds": 3600, "artAsset": "sun.haze.fill" },
+    { "id": "dest.vega-observatory", "name": "직녀 관측소", "regionID": "region.vega", "travelSeconds": 10800, "artAsset": "binoculars.fill" },
+    { "id": "dest.horsehead", "name": "말머리 성운", "regionID": "region.orion", "travelSeconds": 5400, "artAsset": "cloud.fill" },
+    { "id": "dest.orion-nebula", "name": "오리온 대성운", "regionID": "region.orion", "travelSeconds": 14400, "artAsset": "cloud.sun.fill" },
+    { "id": "dest.sagittarius-a", "name": "궁수자리 A*", "regionID": "region.core", "travelSeconds": 21600, "artAsset": "circle.dashed.inset.filled" },
+    { "id": "dest.andromeda-core", "name": "안드로메다 코어", "regionID": "region.andromeda", "travelSeconds": 21600, "artAsset": "hurricane.circle.fill" }
+  ],
+  "ships": [
+    { "id": "ship.stella", "name": "스텔라 호", "requiredTotalFocusSeconds": 0, "artAsset": "paperplane.fill" },
+    { "id": "ship.comet", "name": "혜성 호", "requiredTotalFocusSeconds": 18000, "artAsset": "location.north.fill" },
+    { "id": "ship.aurora", "name": "오로라 호", "requiredTotalFocusSeconds": 72000, "artAsset": "rhombus.fill" },
+    { "id": "ship.nova", "name": "노바 호", "requiredTotalFocusSeconds": 180000, "artAsset": "bolt.fill" },
+    { "id": "ship.polaris", "name": "폴라리스 호", "requiredTotalFocusSeconds": 360000, "artAsset": "star.fill" }
+  ]
+}
