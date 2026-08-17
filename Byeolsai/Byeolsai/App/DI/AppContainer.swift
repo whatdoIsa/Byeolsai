@@ -21,8 +21,8 @@ final class AppContainer {
             fatalError("UniverseContent.json load failed: \(error)")
         }
         let milestones = MilestoneEngine(catalog: catalog)
-        progress = ProgressStore(repository: repository, milestones: milestones)
-        engine = SessionEngine(store: progress)
+        progress = ProgressStore(repository: repository, milestones: milestones, snapshotPublisher: WidgetSnapshotPublisher())
+        engine = SessionEngine(store: progress, activityPresenter: LiveActivityController())
     }
 
     func bootstrap() async {
