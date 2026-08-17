@@ -29,6 +29,7 @@ final class ProgressStore {
     }
 
     func load() async throws {
+        try await repository.prepare()
         sessions = try await repository.allSessions()
         if let existing = try await repository.loadProfile() {
             profile = existing
