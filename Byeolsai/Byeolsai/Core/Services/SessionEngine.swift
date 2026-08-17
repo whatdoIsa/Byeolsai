@@ -27,12 +27,10 @@ final class SessionEngine {
 
     private let store: ProgressStore
     private let integrity: IntegrityGuard
-    private let activityPresenter: SessionActivityPresenting?
 
-    init(store: ProgressStore, integrity: IntegrityGuard = IntegrityGuard(), activityPresenter: SessionActivityPresenting? = nil) {
+    init(store: ProgressStore, integrity: IntegrityGuard = IntegrityGuard()) {
         self.store = store
         self.integrity = integrity
-        self.activityPresenter = activityPresenter
     }
 
     var activeSession: ActiveSession? {
@@ -42,9 +40,7 @@ final class SessionEngine {
 
     func start(destination: Destination, mode: SessionMode, now: Date = .now) {
         guard case .idle = phase, let ship = store.currentShip else { return }
-        let active = ActiveSession(startAt: now, mode: mode, destination: destination, ship: ship)
-        phase = .running(active)
-        activityPresenter?.sessionDidStart(active)
+        phase = .running(ActiveSession(startAt: now, mode: mode, destination: destination, ship: ship))
     }
 
     func elapsedSeconds(now: Date = .now) -> Int {
@@ -78,7 +74,6 @@ final class SessionEngine {
             unlocks: unlocks,
             arrived: raw >= active.destination.travelSeconds
         ))
-        activityPresenter?.sessionDidEnd()
     }
 
     func completeIfArrived(now: Date = .now) async {

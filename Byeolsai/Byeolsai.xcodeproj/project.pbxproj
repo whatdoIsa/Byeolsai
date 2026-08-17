@@ -6,18 +6,7 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		B2000000000000000000B00A /* ByeolsaiWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B2000000000000000000B001 /* ByeolsaiWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
-		B2000000000000000000B008 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E9C6F94D3031AE310017AE04 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B2000000000000000000B004;
-			remoteInfo = ByeolsaiWidgets;
-		};
 		B1000000000000000000A006 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E9C6F94D3031AE310017AE04 /* Project object */;
@@ -27,53 +16,15 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		B2000000000000000000B00B /* Embed Foundation Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				B2000000000000000000B00A /* ByeolsaiWidgets.appex in Embed Foundation Extensions */,
-			);
-			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		B1000000000000000000A001 /* ByeolsaiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ByeolsaiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2000000000000000000B001 /* ByeolsaiWidgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ByeolsaiWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C6F9553031AE310017AE04 /* Byeolsai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Byeolsai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		B2000000000000000000B00F /* Exceptions for "ByeolsaiWidgets" folder in "ByeolsaiWidgets" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = B2000000000000000000B004 /* ByeolsaiWidgets */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B1000000000000000000A002 /* ByeolsaiTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ByeolsaiTests;
-			sourceTree = "<group>";
-		};
-		B2000000000000000000B002 /* ByeolsaiWidgets */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				B2000000000000000000B00F /* Exceptions for "ByeolsaiWidgets" folder in "ByeolsaiWidgets" target */,
-			);
-			path = ByeolsaiWidgets;
-			sourceTree = "<group>";
-		};
-		B2000000000000000000B003 /* SharedKit */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SharedKit;
 			sourceTree = "<group>";
 		};
 		E9C6F9573031AE310017AE04 /* Byeolsai */ = {
@@ -84,13 +35,6 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B2000000000000000000B006 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B1000000000000000000A004 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -112,8 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				E9C6F9573031AE310017AE04 /* Byeolsai */,
-				B2000000000000000000B003 /* SharedKit */,
-				B2000000000000000000B002 /* ByeolsaiWidgets */,
 				B1000000000000000000A002 /* ByeolsaiTests */,
 				E9C6F9563031AE310017AE04 /* Products */,
 			);
@@ -123,7 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				E9C6F9553031AE310017AE04 /* Byeolsai.app */,
-				B2000000000000000000B001 /* ByeolsaiWidgets.appex */,
 				B1000000000000000000A001 /* ByeolsaiTests.xctest */,
 			);
 			name = Products;
@@ -139,16 +80,13 @@
 				E9C6F9513031AE310017AE04 /* Sources */,
 				E9C6F9523031AE310017AE04 /* Frameworks */,
 				E9C6F9533031AE310017AE04 /* Resources */,
-				B2000000000000000000B00B /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B2000000000000000000B009 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				E9C6F9573031AE310017AE04 /* Byeolsai */,
-				B2000000000000000000B003 /* SharedKit */,
 			);
 			name = Byeolsai;
 			packageProductDependencies = (
@@ -156,29 +94,6 @@
 			productName = Byeolsai;
 			productReference = E9C6F9553031AE310017AE04 /* Byeolsai.app */;
 			productType = "com.apple.product-type.application";
-		};
-		B2000000000000000000B004 /* ByeolsaiWidgets */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B2000000000000000000B00E /* Build configuration list for PBXNativeTarget "ByeolsaiWidgets" */;
-			buildPhases = (
-				B2000000000000000000B005 /* Sources */,
-				B2000000000000000000B006 /* Frameworks */,
-				B2000000000000000000B007 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				B2000000000000000000B002 /* ByeolsaiWidgets */,
-				B2000000000000000000B003 /* SharedKit */,
-			);
-			name = ByeolsaiWidgets;
-			packageProductDependencies = (
-			);
-			productName = ByeolsaiWidgets;
-			productReference = B2000000000000000000B001 /* ByeolsaiWidgets.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 		B1000000000000000000A003 /* ByeolsaiTests */ = {
 			isa = PBXNativeTarget;
@@ -212,9 +127,6 @@
 				LastSwiftUpdateCheck = 2640;
 				LastUpgradeCheck = 2640;
 				TargetAttributes = {
-					B2000000000000000000B004 = {
-						CreatedOnToolsVersion = 26.4.1;
-					};
 					B1000000000000000000A003 = {
 						CreatedOnToolsVersion = 26.4.1;
 						TestTargetID = E9C6F9543031AE310017AE04;
@@ -239,20 +151,12 @@
 			projectRoot = "";
 			targets = (
 				E9C6F9543031AE310017AE04 /* Byeolsai */,
-				B2000000000000000000B004 /* ByeolsaiWidgets */,
 				B1000000000000000000A003 /* ByeolsaiTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B2000000000000000000B007 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E9C6F9533031AE310017AE04 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -263,13 +167,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B2000000000000000000B005 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B1000000000000000000A005 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -287,11 +184,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B2000000000000000000B009 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B2000000000000000000B004 /* ByeolsaiWidgets */;
-			targetProxy = B2000000000000000000B008 /* PBXContainerItemProxy */;
-		};
 		B1000000000000000000A007 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E9C6F9543031AE310017AE04 /* Byeolsai */;
@@ -432,7 +324,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "\Ubcc4\Uc0ac\Uc774";
-				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -466,7 +357,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "\Ubcc4\Uc0ac\Uc774";
-				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -480,62 +370,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kr.arcseed.byeolsai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		B2000000000000000000B00C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = T6245YXX47;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ByeolsaiWidgets/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "\Ubcc4\Uc0ac\Uc774";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.arcseed.byeolsai.widgets;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		B2000000000000000000B00D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = T6245YXX47;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ByeolsaiWidgets/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "\Ubcc4\Uc0ac\Uc774";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.arcseed.byeolsai.widgets;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -592,15 +426,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B2000000000000000000B00E /* Build configuration list for PBXNativeTarget "ByeolsaiWidgets" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B2000000000000000000B00C /* Debug */,
-				B2000000000000000000B00D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		B1000000000000000000A00A /* Build configuration list for PBXNativeTarget "ByeolsaiTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -22,7 +22,7 @@ final class AppContainer {
         }
         let milestones = MilestoneEngine(catalog: catalog)
         progress = ProgressStore(repository: repository, milestones: milestones)
-        engine = SessionEngine(store: progress, activityPresenter: LiveActivityController())
+        engine = SessionEngine(store: progress)
     }
 
     func bootstrap() async {
