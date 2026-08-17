@@ -9,11 +9,13 @@ final class ProgressStore {
     private let repository: FocusRepository
     private let milestones: MilestoneEngine
     private let calendar: Calendar
+    private let snapshotPublisher: SnapshotPublishing?
 
-    init(repository: FocusRepository, milestones: MilestoneEngine, calendar: Calendar = .current) {
+    init(repository: FocusRepository, milestones: MilestoneEngine, calendar: Calendar = .current, snapshotPublisher: SnapshotPublishing? = nil) {
         self.repository = repository
         self.milestones = milestones
         self.calendar = calendar
+        self.snapshotPublisher = snapshotPublisher
     }
 
     var todaySeconds: Int {
@@ -46,6 +48,7 @@ final class ProgressStore {
             try await repository.save(profile: fresh)
             profile = fresh
         }
+        publishSnapshot()
     }
 
     func record(_ session: FocusSession) async throws -> UnlockResult {
@@ -63,6 +66,7 @@ final class ProgressStore {
         let unlocks = milestones.apply(to: &updated)
         try await repository.save(profile: updated)
         profile = updated
+        publishSnapshot()
         return unlocks
     }
 
@@ -79,5 +83,24 @@ final class ProgressStore {
 
     var nextMilestone: (region: Region, remainingSeconds: Int)? {
         profile.flatMap { milestones.nextRegionMilestone(totalFocusSeconds: $0.totalFocusSeconds) }
+    }
+
+    private func publishSnapshot() {
+        guard let profile else { return }
+        let next = nextMilestone
+        let progress: Double
+        if let next, next.region.requiredTotalFocusSeconds > 0 {
+            progress = min(1, Double(profile.totalFocusSeconds) / Double(next.region.requiredTotalFocusSeconds))
+        } else {
+            progress = 1
+        }
+        snapshotPublisher?.publish(WidgetSnapshot(
+            todaySeconds: todaySeconds,
+            totalFocusSeconds: profile.totalFocusSeconds,
+            currentStreak: profile.currentStreak,
+            nextRegionName: next?.region.name,
+            nextRegionProgress: progress,
+            updatedAt: .now
+        ))
     }
 }
